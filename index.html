@@ -11,6 +11,10 @@
   <div class="top-container">
     <header class="navbar">
       <div class="logo">LQ <span>LOOKAIQ</span></div>
+
+      <button class="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
       <nav>
         <a href="#how-it-works">HOW IT WORKS</a>
         <a href="#">ABOUT</a>
@@ -85,5 +89,14 @@
     </div>
     <p>&copy; 2025 LOOKIQ. All rights reserved.</p>
   </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
