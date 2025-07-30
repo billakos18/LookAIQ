@@ -261,10 +261,11 @@ footer {
 
 @media (max-width: 768px) {
   .nav-links {
+    display: none;
     position: absolute;
     top: 70px;
     right: 0;
-    background: #f3e2d4;
+    background: transparent;
     display: none;
     flex-direction: column;
     padding: 20px;

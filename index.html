@@ -14,8 +14,8 @@
 
       <button class="menu-toggle">
       <i class="fa-solid fa-bars"></i>
-    </button>
-      <nav>
+      </button>
+      <nav class="nav-links">
         <a href="#how-it-works">HOW IT WORKS</a>
         <a href="#">ABOUT</a>
         <a href="#">CONTACT US</a>
@@ -32,12 +32,12 @@
 
   <div class="mid-container">
     <section class="intro">
-      <h2>WHAT IS LOOKIQ?</h2>
-      <p>LOOKIQ is an AI-powered beauty recommendation platform that analyzes your facial features to suggest personalized beauty products and tips.</p>
+      <h2>WHAT IS LOOKAIQ?</h2>
+      <p>LookAIQ is an AI-powered beauty recommendation platform that analyzes your facial features to suggest personalized beauty products and tips.</p>
     </section>
     
     <section class="features">
-      <h2>WHY CHOOSE LOOKIQ?</h2>
+      <h2>WHY CHOOSE LOOKAIQ?</h2>
       <div class="feature-list">
         <div class="feature">
           <h3><i class="fa-solid fa-robot"></i> AI-Powered Analysis</h3>
@@ -95,7 +95,11 @@
     const navLinks = document.querySelector('.nav-links');
 
     menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      } else {
+        navLinks.classList.add('active');
+      }
     });
   </script>
 </body>
