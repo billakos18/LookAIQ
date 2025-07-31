@@ -76,6 +76,11 @@ body {
   font-weight: bold;
 }
 
+.badge{
+  width: 12%;
+  aspect-ratio: 1/1;
+}
+
 .hero-text h1 {
   font-size: 36px;
   margin-bottom: 20px;

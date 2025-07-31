@@ -25,6 +25,7 @@
     <section class="hero">
       <div class="hero-text">
         <h1>Eξατομικευμένες εμπειρίες ομορφιάς με AI</h1>
+        <img src="patent-badge.png" alt="Patent Badge" class="badge">
         <p>Το LookIQ είναι το πατενταρισμένο σύστημα που αξιοποιεί Τεχνητή Νοημοσύνη για να αναλύει τα χαρακτηριστικά του προσώπου σου και να προτείνει μοναδικές θεραπείες και υπηρεσίες ομορφιάς.</p>
         <a href="#" class="demo-btn">Δες το demo</a>
       </div>
@@ -119,11 +120,19 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       if (navLinks.classList.contains('active')) {
         navLinks.classList.remove('active');
       } else {
         navLinks.classList.add('active');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      const isClickInside = navLinks.contains(e.target) || menuToggle.contains(e.target);
+      if (!isClickInside) {
+        navLinks.classList.remove('active');
       }
     });
   </script>
